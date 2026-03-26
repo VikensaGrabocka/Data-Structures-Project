@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="deleteBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.part1.DeleteController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+            <TextField alignment="CENTER" editable="false" text="DOCTOR'S INFORMATION">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ComboBox fx:id="doctorId" onAction="#onDoctorSelected" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" />
+               </VBox.margin>
+            </ComboBox>
+         </children>
+      </VBox>
+      <TextField fx:id="doctorName" prefHeight="25.0" prefWidth="102.0" promptText="Name">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </TextField>
+      <TextField fx:id="doctorSurname" promptText="Surname">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </TextField>
+      <TextField fx:id="doctorPosition" promptText="Position">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </TextField>
+      <TextField fx:id="doctorDepartment" promptText="Department">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </TextField>
+      <TextField fx:id="doctorEmail" promptText="Email">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </TextField>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                <Button fx:id="backBtn" mnemonicParsing="false" onAction="#goHome" text="BACK" />
+                  <Button fx:id="deleteDocBtn" alignment="CENTER" mnemonicParsing="false" onAction="#deleteRecord" text="DELETE" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="notFoundMsg" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+         <children>
+            <Label fx:id="foundMsg" text="RECORD DELETED SUCCESSFULLY!" textFill="#64ba8f" visible="false" />
+            <Label fx:id="notfoundMsg" text="DOCTOR NOT FOUND!" textFill="#e20606" visible="false" />
+         </children>
+      </VBox>
+   </children>
+</VBox>

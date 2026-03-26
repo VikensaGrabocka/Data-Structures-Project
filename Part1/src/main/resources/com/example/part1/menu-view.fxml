@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--<AnchorPane fx:id="menu" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">-->
+
+<AnchorPane fx:id="menu" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.part1.MenuController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="600.0" spacing="20.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <TextField alignment="TOP_CENTER" editable="false" text="DOCTOR MANAGEMENT SYSTEM">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" opacity="0.96" text="MENU">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Please select one option:" textAlignment="CENTER" />
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="101.0" prefWidth="266.0" spacing="20.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <ToggleButton fx:id="addBtn" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#gatherDoctorInformation" prefHeight="25.0" prefWidth="115.0" text="    ADD DOCTOR" />
+                              <ToggleButton fx:id="sortBtn" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#openSortView" prefHeight="25.0" prefWidth="119.0" text="    SORT RECORDS" textAlignment="CENTER" />
+                              <MenuButton fx:id="traversalBtn" mnemonicParsing="false" text="TRAVERSAL">
+                                <items>
+                                  <MenuItem fx:id="levelOrder" mnemonicParsing="false" onAction="#printLevelOrder" text="LEVEL-ORDER" />
+                                  <MenuItem fx:id="preOrder" mnemonicParsing="false" onAction="#printPreOrder" text="PREORDER" />
+                                    <MenuItem fx:id="postOrder" mnemonicParsing="false" onAction="#printPostOrder" text="POSTORDER" />
+                                </items>
+                              </MenuButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets right="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox prefHeight="23.0" prefWidth="241.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                 <children>
+                                    <ToggleButton fx:id="deleteBtn" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#openDeleteWindow" prefHeight="25.0" prefWidth="114.0" text="DELETE DOCTOR" textAlignment="CENTER" />
+                                    <ToggleButton fx:id="searchBtn" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#openSearchWindow" prefHeight="25.0" prefWidth="121.0" text="SEARCH DOCTOR" textAlignment="CENTER" />
+                                    <ToggleButton fx:id="saveBtn" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#saveInFile" prefHeight="25.0" prefWidth="97.0" text="        SAVE" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets right="20.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="“Medicines can cure diseases, but only doctors can cure patients.” – Carl Jung" textAlignment="CENTER" wrappingWidth="336.80335426330566">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

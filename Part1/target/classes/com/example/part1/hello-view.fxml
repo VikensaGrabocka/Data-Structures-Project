@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" opacity="0.89" prefHeight="1108.0" prefWidth="607.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.part1.MenuController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <TextField alignment="TOP_CENTER" text="DOCTOR MANAGEMENT SYSTEM">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </TextField>
+   <TextField alignment="CENTER" opacity="0.96" text="MENU">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </TextField>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Please select one option:" textAlignment="CENTER" />
+   <RadioButton id="insertBtn" fx:id="insertRecord" mnemonicParsing="false" onAction="#gatherDoctorInformation" text="Insert a record" textAlignment="CENTER">
+      <toggleGroup>
+         <ToggleGroup fx:id="menu" />
+      </toggleGroup>
+   </RadioButton>
+   <RadioButton id="deleteBtn" fx:id="deleteBtn" mnemonicParsing="false" text="Delete a record" textAlignment="CENTER" toggleGroup="$menu" />
+   <RadioButton id="searchBtn" fx:id="searchBtn" mnemonicParsing="false" text="Search a record" textAlignment="CENTER" toggleGroup="$menu" />
+   <RadioButton id="SortBtn" fx:id="sortBtn" mnemonicParsing="false" text="Sort records" textAlignment="CENTER" toggleGroup="$menu" />
+   <RadioButton id="levelOrderBtn" fx:id="levelOrderBtn" mnemonicParsing="false" text="Level order traversal" textAlignment="CENTER" toggleGroup="$menu" />
+   <RadioButton id="PreorderBtn" fx:id="preorderBtn" mnemonicParsing="false" text="Preorder traversal" textAlignment="CENTER" toggleGroup="$menu" />
+   <RadioButton id="postorderBtn" fx:id="postorderBtn" mnemonicParsing="false" text="Postorder traversal" textAlignment="CENTER" toggleGroup="$menu" />
+   <RadioButton mnemonicParsing="false" text="Save" />
+   <Button id="okBtn" fx:id="okBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="OK" />
+   <VBox alignment="CENTER" prefHeight="243.0" prefWidth="557.0" visible="false">
+      <children>
+         <VBox fx:id="doctorInfo" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <children>
+               <TextField alignment="CENTER" text="DOCTOR'S INFORMATION" />
+            </children>
+         </VBox>
+         <TextField fx:id="doctorId" prefHeight="25.0" prefWidth="203.0" promptText="Doctor Id" />
+         <TextField fx:id="doctorName" prefHeight="25.0" prefWidth="102.0" promptText="Name" />
+         <TextField fx:id="doctorSurname" promptText="Surname" />
+         <TextField fx:id="doctorPosition" promptText="Position" />
+         <TextField fx:id="doctorDepartment" promptText="Department" />
+         <TextField fx:id="doctorEmail" promptText="Email" />
+         <Button fx:id="saveDoctorBtn" alignment="CENTER" mnemonicParsing="false" onAction="#insertDoctor" text="Enter" />
+      </children>
+   </VBox>
+   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+      <children>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Please insert the fields of the record that you want to delete: " />
+         <TextField prefHeight="25.0" prefWidth="203.0" promptText="Doctor Id" />
+         <TextField prefHeight="25.0" prefWidth="102.0" promptText="Name" />
+         <TextField promptText="Surname" />
+         <TextField promptText="Position" />
+         <TextField promptText="Department" />
+         <TextField promptText="Email" />
+         <Button id="okBtn" fx:id="okBtn1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="OK" />
+      </children>
+   </VBox>
+   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+      <children>
+         <TextArea prefHeight="200.0" prefWidth="200.0" text="SEARCH A RECORD: " />
+         <TextField prefHeight="25.0" prefWidth="203.0" promptText="Doctor Id" />
+         <Button id="okBtn" fx:id="okBtn2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="OK" />
+      </children>
+   </VBox>
+</VBox>

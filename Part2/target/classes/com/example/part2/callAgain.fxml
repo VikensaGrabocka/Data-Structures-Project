@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="callAgain" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.part2.callAgainController">
+   <children>
+      <Label text="Call Again">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+         <children>
+            <TextField alignment="TOP_CENTER" text="Calling...">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="name" promptText="Name">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="surname" promptText="Surname">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="phone" promptText="Phone">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="againBtn" mnemonicParsing="false" onAction="#callAgain" prefHeight="25.0" prefWidth="95.0" text="Again">
+                     <HBox.margin>
+                        <Insets left="40.0" right="40.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="backBtn" mnemonicParsing="false" onAction="#goHome" prefHeight="25.0" prefWidth="114.0" text="Back" />
+               </children>
+            </HBox>
+            <Label fx:id="notFoundMsg" prefHeight="17.0" prefWidth="174.0" text="       No contact was found!" textAlignment="CENTER" textFill="#e20808" visible="false" />
+         </children>
+      </VBox>
+   </children>
+</VBox>

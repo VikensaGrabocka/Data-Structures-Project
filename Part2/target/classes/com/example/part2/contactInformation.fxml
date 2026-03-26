@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="menu" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.part2.ContactInformationController">
+   <children>
+      <Label text="Contact Information Manager">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="callNext" mnemonicParsing="false" onAction="#callNext" prefHeight="25.0" prefWidth="100.0" text="Call next ">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="previousBtn" mnemonicParsing="false" onAction="#callPrevious" prefHeight="25.0" prefWidth="100.0" text="Call previous">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="callAgain" mnemonicParsing="false" onAction="#callAgain" prefHeight="25.0" prefWidth="100.0" text="Call again">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="shuffleBtn" mnemonicParsing="false" onAction="#setShuffle" prefHeight="25.0" prefWidth="100.0" text="Shuffle">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="insertBtn" mnemonicParsing="false" onAction="#insertContact" prefHeight="25.0" prefWidth="100.0" text="Insert Contact">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#displayDelete" prefHeight="25.0" prefWidth="100.0" text="Delete Contact">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Button>
+                  <MenuButton fx:id="traverseBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Traverse" textAlignment="CENTER">
+                    <items>
+                      <MenuItem fx:id="forwardsOption" mnemonicParsing="false" onAction="#openForwards" text="Forwards" />
+                      <MenuItem fx:id="backwardsOption" mnemonicParsing="false" onAction="#openBackwards" text="Backwards" />
+                    </items>
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </MenuButton>
+                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="100.0" text="Save">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
